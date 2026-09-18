@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        /* --- RESET AND BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        /* --- LEFT SIDEBAR (Dark Theme) --- */
+        .sidebar {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 40px 30px;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-title {
+            font-size: 14px;
+            color: #1abc9c;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-heading {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            margin-top: 30px;
+            color: #1abc9c;
+        }
+
+        .contact-list, .skills-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            font-size: 13px;
+            margin-bottom: 12px;
+            word-break: break-word;
+        }
+
+        .skills-list li {
+            font-size: 13px;
+            background-color: #34495e;
+            padding: 6px 12px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* --- MAIN CONTENT AREA (Light Theme) --- */
+        .main-content {
+            padding: 40px 40px;
+        }
+
+        .main-heading {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #2c3e50;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .main-heading:first-of-type {
+            margin-top: 0;
+        }
+
+        .summary-text {
+            font-size: 14.5px;
+            color: #555555;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title, .degree {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .company, .institution {
+            font-size: 14px;
+            color: #1abc9c;
+            font-weight: 600;
+        }
+
+        .date-range {
+            font-size: 12px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .timeline-body {
+            font-size: 14px;
+            color: #555555;
+            padding-left: 15px;
+        }
+
+        /* --- RESPONSIVE DESIGN FOR MOBILE --- */
+        @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 10px;
+            }
+            .sidebar {
+                padding: 30px 20px;
+            }
+            .main-content {
+                padding: 30px 20px;
+            }
+            .timeline-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .date-range {
+                margin-top: 2px;
+            }
+        }
+
+        /* --- PRINT OPTIMIZATION --- */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <h1 class="profile-name">Alex Morgan</h1>
+                <p class="profile-title">Software Engineer</p>
+            </div>
+
+            <h2 class="sidebar-heading">Contact</h2>
+            <ul class="contact-list">
+                <li>📧 alex.morgan@email.com</li>
+                <li>📱 (555) 019-2834</li>
+                <li>📍 San Francisco, CA</li>
+                <li>🔗 ://linkedin.com</li>
+                <li>💻 ://github.com</li>
+            </ul>
+
+            <h2 class="sidebar-heading">Skills</h2>
+            <ul class="skills-list">
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>HTML5 & CSS3</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Git</li>
+            </ul>
+
+            <h2 class="sidebar-heading">Education</h2>
+            <div class="timeline-item">
+                <div class="degree">B.S. in Computer Science</div>
+                <div class="institution">Stanford University</div>
+                <div class="date-range">2018 - 2022</div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <section>
+                <h2 class="main-heading">Professional Summary</h2>
+                <p class="summary-text">
+                    Performance-driven and detail-oriented Software Engineer with over 4 years of experience building scalable web applications. Adept at collaborative problem-solving, modern frontend frameworks, and optimizing backend databases to deliver clean, highly interactive user experiences.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="main-heading">Experience</h2>
+                
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="job-title">Senior Software Engineer</span>
+                        <span class="date-range">2024 - Present</span>
+                    </div>
+                    <div class="company">TechCorp Solutions</div>
+                    <ul class="timeline-body">
+                        <li>Led a team of 4 developers to architecture and deploy a high-traffic SaaS dashboard, increasing load speeds by 40%.</li>
+                        <li>Implemented responsive modular components using React and styled-components.</li>
+                        <li>Mentored junior engineers and conducted robust code reviews to ensure system reliability.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="job-title">Web Developer</span>
+                        <span class="date-range">2022 - 2024</span>
+                    </div>
+                    <div class="company">Innovate Digital Agency</div>
+                    <ul class="timeline-body">
+                        <li>Developed and optimized 15+ accessible, mobile-first websites utilizing semantic HTML5 and cutting-edge CSS layouts.</li>
+                        <li>Integrated RESTful APIs and optimized database queries reducing API latency by 15%.</li>
+                        <li>Collaborated closely with UX/UI designers to convert Figma mockups into flawless, operational code.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="main-heading">Projects</h2>
+                
+                <!-- Project 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <span class="job-title">E-Commerce Analytics Dashboard</span>
+                        <span class="date-range">Personal Project</span>
+                    </div>
+                    <ul class="timeline-body">
+                        <li>Built a real-time data visualizer tracking online store key metrics using Node.js and Chart.js.</li>
+                        <li>Leveraged CSS Grid to create a responsive, widget-based interface customizable by the user.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
